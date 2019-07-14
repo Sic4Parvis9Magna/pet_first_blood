@@ -1,1 +1,19 @@
+pluginManagement {
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == 'gretty.plugin') {
+                from("https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin")
+            }
+            if (requested.id.id == 'io.spring.dependency-management') {
+                useModule("io.spring.gradle:dependency-management-plugin:${requested.version}")
+            }
+        }
+    }
+}
+
 rootProject.name='pet_first_blood'

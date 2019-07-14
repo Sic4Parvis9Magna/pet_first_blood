@@ -2,7 +2,11 @@
 /.gradle/
 /.idea/
 /build/
+/.vscode
+/node_modules
 *.iml
+
+package-lock.json
 
 # Compiled class file
 *.class
